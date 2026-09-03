@@ -1,0 +1,32 @@
+{
+  "cue_path": "",
+  "cue_name": "WipEout (Europe).cue",
+  "bin_name": "WipEout (Europe) (Track 01).bin",
+  "track_count": 12,
+  "data_track_size": 64988112,
+  "data_track_md5": "23c2abd60259c0ddb84a2c4e72278729",
+  "data_track_sha1": "93a70ff5be6d8a4b25bf40ba453e6ded864ad645",
+  "data_track_crc32": "7f6c5a6a",
+  "boot_exe": "SCES_000.10",
+  "serial": "SCES-00010",
+  "serial_exe": "SCES_000.10",
+  "volume_id": "WIPEOUT",
+  "display_name": "WipEout",
+  "load_address": "0x80010000",
+  "entry_pc": "0x80078420",
+  "text_size": "0x0006F800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "96e475a2fd5d4d38f78cd96294f9fdad12358461cc17207b6c5251276ff314a4",
+  "boot_exe_sha256": "3aee0a0998a5d1e6b5abc7839a9a1c90220f3a668a2206c0f2fb1f6f97b62ba7",
+  "seed_count": 556,
+  "warnings": [
+    "The owned Track 01 identity did not match the current Redump digest corpus.",
+    "BIOS-stage audio and FMV vertical placement defects remain open."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "WipEout"
+id = "SCES-00010"
+players = 2
+exe = "disc/SCES_000.10"
+disc = "disc/WipEout (Europe).cue"
+load_address = "0x80010000"
+entry_pc = "0x80078420"
+text_size = "0x0006F800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "WipEout (Europe) (Track 01).bin"
+cue_name = "WipEout (Europe).cue"
+boot_exe = "SCES_000.10"
+known_sizes = [697375056, 64988112]
+known_md5 = [
+  "586c30e82de1bcdf897a9922d90c2054",
+  "23c2abd60259c0ddb84a2c4e72278729",
+]
+known_sha1 = [
+  "ebe7348e3e075e37cf064d786c0e99e5a3f04a7d",
+  "93a70ff5be6d8a4b25bf40ba453e6ded864ad645",
+]
+known_crc32 = [
+  "47b725e8",
+  "7f6c5a6a",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+strict = true
+
+[runtime]
+window_title = "WipEout Recompiled"
+memcard_dir = "saves"
+bios_hle = false
+openbios = false
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 12
+required_disc_fp = "96e475a2fd5d4d38f78cd96294f9fdad12358461cc17207b6c5251276ff314a4"

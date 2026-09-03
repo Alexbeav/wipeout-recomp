@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "WipEout",
+    "id": "SCES-00010",
+    "boot_exe": "SCES_000.10"
+  },
+  "marketing": {
+    "description": "WipEout recompiled for modern systems using psxrecomp.",
+    "publisher": "Psygnosis",
+    "year": "1995",
+    "region": "Europe",
+    "players": 2
+  },
+  "rom_identity": {
+    "cue_name": "WipEout (Europe).cue",
+    "bin_name": "WipEout (Europe) (Track 01).bin",
+    "track_counts": [
+      12
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 64988112,
+      "md5": "23c2abd60259c0ddb84a2c4e72278729",
+      "sha1": "93a70ff5be6d8a4b25bf40ba453e6ded864ad645",
+      "crc32": "7f6c5a6a"
+    },
+    "disc_fp": "96e475a2fd5d4d38f78cd96294f9fdad12358461cc17207b6c5251276ff314a4"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x80078420",
+    "text_size": "0x0006F800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 556,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "The owned Track 01 identity did not match the current Redump digest corpus.",
+    "BIOS-stage audio and FMV vertical placement defects remain open."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
